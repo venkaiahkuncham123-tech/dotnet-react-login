@@ -11,3 +11,6 @@ app.MapPost("/api/auth/login", ([FromBody] LoginRequest req) =>
 });
 app.Run();
 record LoginRequest(string Username,string Password);
+
+
+
