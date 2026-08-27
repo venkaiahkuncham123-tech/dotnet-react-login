@@ -13,5 +13,5 @@ jobs:
         run: echo "first step"
    Deploy_job:
      needs: Build_Job
-     uses: ./.github/workflows/resuable-workflow.yml
+     uses: ./.github/workflows/resuable-workflow.yml@main
       
