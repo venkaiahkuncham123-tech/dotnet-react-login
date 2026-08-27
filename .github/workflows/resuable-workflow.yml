@@ -1,10 +1,10 @@
 name: reusable-workflow
 on:
   push:
-     branches: 
-       - main
-     paths: 
-       - "Backend/**"
+    branches: 
+      - main
+    paths: 
+      - "Backend/**"
   workflow_dispatch: 
   workflow_call: 
     inputs:
