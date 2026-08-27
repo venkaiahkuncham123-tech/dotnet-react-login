@@ -3,8 +3,7 @@ on:
   push:
     branches:
       - main
-  workflow-call:
-  workflow-dispatch:
+    workflow-dispatch:
 jobs:
   Build_Job:
     runs-on: ubuntu-latest
