@@ -3,10 +3,15 @@ on:
   push:
     branches:
       - main
+  workflow-call:
+  workflow-dispatch:
 jobs:
   Build_Job:
     runs-on: ubuntu-latest
     steps:
       - name: first step
         run: echo "first step"
+   Deploy_job:
+     needs: Build_Job
+     uses: ./.github/workflows/resuable-workflow.yml
       
