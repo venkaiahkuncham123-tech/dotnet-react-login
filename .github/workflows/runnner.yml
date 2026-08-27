@@ -1,0 +1,10 @@
+name: called_job
+on:
+  workflow_dispatch: 
+jobs:
+  called_job_one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: called job
+        run: echo "called job"
+        
