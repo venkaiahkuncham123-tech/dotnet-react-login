@@ -6,6 +6,7 @@ on:
   workflow_run:
     workflows:
       - sample-jobs
+      - called_job
     types: 
       - completed
 jobs:
