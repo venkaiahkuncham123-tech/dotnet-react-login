@@ -13,6 +13,6 @@ jobs:
   Deploy_job:
     uses: ./.github/workflows/resuable-workflow.yml
     with:
-      node-version: 20
+      node-version: "20"
     needs: Build_Job
       
