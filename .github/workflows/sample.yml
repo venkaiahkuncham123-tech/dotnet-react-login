@@ -1,0 +1,12 @@
+name: sample jobs:
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Build_Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo "first step"
+      
