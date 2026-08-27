@@ -3,8 +3,6 @@ on:
   push:
     branches: 
       - main
-    paths: 
-      - "Backend/**"
   workflow_dispatch: 
   workflow_call: 
     inputs:
@@ -27,6 +25,7 @@ jobs:
       - name: Installing Dependencies
         run: npm ci
   Deploy_job:
+    needs: Build_job
     uses: owner/GitHub-actions/.github/workflows/CD.yml@main
     
           
