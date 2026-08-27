@@ -1,0 +1,16 @@
+name: job trigger
+on:
+  push:
+    branches:
+      - main
+  workflow_run:
+    workflows:
+      - 
+    types: 
+      - completed
+jobs:
+  checkout_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: priting
+        run: echo "Helllo"
