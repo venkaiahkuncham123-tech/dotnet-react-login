@@ -10,8 +10,7 @@ on:
     inputs:
       name:
         type: string
-        required: true
-  
+        required: true 
 jobs:
   Build_job:
     runs-on: ubuntu-latest
