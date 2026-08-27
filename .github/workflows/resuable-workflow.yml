@@ -4,11 +4,7 @@ on:
     branches: 
       - main
   workflow_dispatch: 
-  workflow_call: 
-    inputs:
-      name-a:
-        type: string
-        required: true 
+  workflow_call:     
 jobs:
   Build_job:
     runs-on: ubuntu-latest
@@ -26,7 +22,7 @@ jobs:
         run: npm ci
   Deploy_job:
     needs: Build_job
-    uses: owner/GitHub-actions/.github/workflows/CD.yml@main
+    uses: venkaiahkuncham123-tech/GitHub-actions/.github/workflows/CD.yml@main
     
           
           
