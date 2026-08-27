@@ -22,7 +22,7 @@ jobs:
         run: npm ci
   Deploy_job:
     needs: Build_job
-    uses: venkaiahkuncham123-tech/GitHub-actions/.github/workflows/CD.yml@main
+    uses: venkaiahkuncham123-tech/GitHub-Actions/.github/workflows/CD.yml@main
     
           
           
