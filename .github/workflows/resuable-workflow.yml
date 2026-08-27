@@ -1,0 +1,39 @@
+name: reusable-workflow
+on:
+  push:
+     branches: 
+       - main
+     paths: 
+       - "src/**"
+  workflow_dispatch: 
+  workflow_call: 
+    inputs:
+      name:
+        type: string
+        required: true
+  
+jobs:
+  Build_job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [19,20]
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v7
+      - name: installing node
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{matrix.version}}
+      - name: Installing Dependencies
+        run: npm ci
+  Deploy_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: calling another job
+        uses: owner/GitHub action/.github/workflows/CD.yml@main
+      - name: sample
+        run: echo name is ${{inputs.name}}
+          
+          
