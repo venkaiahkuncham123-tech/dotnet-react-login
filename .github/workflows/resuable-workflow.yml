@@ -8,7 +8,7 @@ on:
   workflow_dispatch: 
   workflow_call: 
     inputs:
-      name:
+      name-a:
         type: string
         required: true 
 jobs:
@@ -27,11 +27,7 @@ jobs:
       - name: Installing Dependencies
         run: npm ci
   Deploy_job:
-    runs-on: ubuntu-latest    
-    steps:
-      - name: calling another job
-        uses: owner/GitHub-actions/.github/workflows/CD.yml@main
-      - name: sample
-        run: echo "name is ${{inputs.name}}"
+    uses: owner/GitHub-actions/.github/workflows/CD.yml@main
+    
           
           
