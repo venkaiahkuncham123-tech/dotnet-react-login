@@ -1,6 +1,5 @@
 name: reusable-workflow
 on:
-  workflow_dispatch: 
   workflow_call: 
     inputs:
       version:
@@ -15,9 +14,9 @@ jobs:
       - name: installing node
         uses: actions/setup-node@v7
         with:
-          node-version: ${{inputs.version}}
+          node-version: ${{ inputs.version }}
       - name: Installing Dependencies
-        run: npm install
+        run: node --version
  
     
           
