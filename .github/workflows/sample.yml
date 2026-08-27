@@ -10,7 +10,9 @@ jobs:
     steps:
       - name: first step
         run: echo "first step"
-   Deploy_job:
-     uses: ./.github/workflows/resuable-workflow.yml@main
-     needs: Build_Job
+  Deploy_job:
+    uses: ./.github/workflows/resuable-workflow.yml
+    with:
+      node-version: 20
+    needs: Build_Job
       
