@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-    workflow-dispatch:
+    workflow_dispatch:
 jobs:
   Build_Job:
     runs-on: ubuntu-latest
@@ -11,6 +11,6 @@ jobs:
       - name: first step
         run: echo "first step"
    Deploy_job:
-     needs: Build_Job
      uses: ./.github/workflows/resuable-workflow.yml@main
+     needs: Build_Job
       
